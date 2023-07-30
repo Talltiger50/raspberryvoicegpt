@@ -2,8 +2,8 @@ import asyncio
 import websockets
 
 async def client():
-    # Replace 'PUBLIC_URL' with the actual public URL provided by local tunnel or the server URL
-    async with websockets.connect('PUBLIC_URL') as websocket:
+    # Replace 'YOUR_API_KEY' with your actual OpenAI API key
+    async with websockets.connect('ws://raspberry1648.loca.lt') as websocket:
         while True:
             message = input("Enter a message: ")
             await websocket.send(message)
